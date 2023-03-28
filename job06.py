@@ -1,26 +1,26 @@
 
 class Rectangle:
     def __init__(self, longeur, largeur):
-        self.longeur = longeur
-        self.largeur = largeur
+        self.__longeur = longeur
+        self.__largeur = largeur
         
-    def return_longeur(self):
-        return self.longeur
-    def return_largeur(self):
-        return self.largeur
+    def get_longeur(self):
+        return self.__longeur
+    def get_largeur(self):
+        return self.__largeur
     
-    def modif_longeur(self, longeur):
-        self.longeur = longeur
-    def modif_largeur(self, largeur):
-        self.largeur = largeur
+    def set_longeur(self, longeur):
+        self.__longeur = longeur
+    def set_largeur(self, largeur):
+        self.__largeur = largeur
 
 rectangle1 = Rectangle(10,5)
 
-print("Longeur: ", rectangle1.return_longeur())
-print("Largeur:", rectangle1.return_largeur())
+print("Longeur: ", rectangle1.get_longeur())
+print("Largeur:", rectangle1.get_largeur())
 
-rectangle1.modif_longeur(20)
-rectangle1.modif_largeur(10)
+rectangle1.set_longeur(20)
+rectangle1.set_largeur(10)
 
-print("la nouvelle longeur est:", rectangle1.return_longeur())
-print("la nouvelle largeur est:", rectangle1.return_largeur())
+print("la nouvelle longeur est:", rectangle1.get_longeur())
+print("la nouvelle largeur est:", rectangle1.get_largeur())
